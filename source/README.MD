@@ -10,16 +10,16 @@ Also in the bottom I will show you, how I prepared Data :)
 -------------------------------
 
 ##### This is the main sheet, where we can find the basic info about the order and the client.
-![source_screen_1](/Users/a1/Documents/GitHub/uncle_cat_shop/source/ss1.png)
+![source_screen_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/ss1.png)
 
 ##### This sheet is for the information about returned orders.
-![source_screen_2](/Users/a1/Documents/GitHub/uncle_cat_shop/source/ss2.png)
+![source_screen_2](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/ss2.png)
 
 ##### We can find some info about products here
-![source_screen_3](/Users/a1/Documents/GitHub/uncle_cat_shop/source/ss3.png)
+![source_screen_3](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/ss3.png)
 
 ##### Here is the info about the employees and the completed orders
-![source_screen_4](/Users/a1/Documents/GitHub/uncle_cat_shop/source/ss4.png)
+![source_screen_4](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/ss4.png)
 
 
 ### It was different.

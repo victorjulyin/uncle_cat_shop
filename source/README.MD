@@ -8,7 +8,7 @@ Also in the bottom I will show you, how I prepared Data :)
 
 
 
-### What do we have in source.
+### What do we have in the source.
 -------------------------------
 
 ##### This is the main sheet, where we can find the basic info about the order and the client.

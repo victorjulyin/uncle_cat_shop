@@ -27,18 +27,4 @@ Also I will show you, [how I prepared](#It-was-different) the Data in the bottom
 
 
 ### It was different.
-
 -------------------------------
-
-
-# Table of Contents
-1. [Example](#examples)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
-
-
-## Example
-## Example2
-## Third Example
-## [Fourth Example](http://www.fourthexample.com) 

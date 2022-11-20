@@ -2,7 +2,7 @@
 -------------------------------
 I have this Data-set from my workshop. I changed the information, so clients are safe :)
 
-Here you can have a quick view of the Data-set final version (or download the .xlsx file). I will use it to build a model of DB, then I will make a DB and some visualisation
+Here you can have a [quick view](What-we-have-in-the-source) of the Data-set final version (or download the .xlsx file). I will use it to build a model of DB, then I will make a DB and some visualisation
 
 Also I will show you, [how I prepared](#It-was-different) the Data in the bottom :)
 

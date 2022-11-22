@@ -31,22 +31,31 @@ Also I will show you, [how I prepared](#It-was-different) the Data in the bottom
 
 1) [Original version](Original-version)
 2) [Coloumn repairing](Coloumn-repairing)
-  * [full_name](full_name)
+  Coloumns that fixed manually:
+  * full_name
+  * city_name
+  * delivery_price
+  Special coloumns:
   * [order_date, order_id](order_date,-order_id)
+  * [phone_number](phone_number)
+  Next coloumns were made by the [similar way](Other-coloumns):
   * model_id
   * color_name
   * platform_name
-  * phone_number
-  * city_name
   * discount
-  * delivery_price
+
+
+
+  
+  
 
 
 ### Original version
 -------------------------------
 When I started the work with the source file, it looked like this:
 
-![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/past_xlsx_1.png)
+![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/past_xlsx_2.png)
+
 
 As you can see, the information is not structured well, also here are a lot of omissions.
 We didn't need to keep these records very clean, because we needed more flexibility than purity :)
@@ -57,20 +66,19 @@ We didn't need to keep these records very clean, because we needed more flexibil
 
 There were problems at every coloumn, so I had to fix them.
 
-##### full_name:
+
+#### order_date, order_id:
 -------------------------------
 
-At first I invented few names to fill blanks of this field and did it manually. 
-Also I changed the table formatting.
+I wanted the table to look natural. So I had to use some Python to reach it.
 
-![preparing_xlsx_1](вставить_ссылку)
+This script:
+1) produces the random sum of days and the order_id.
+2) shuffles it by small parts, so the order execution sequence looks like in a real database.
+3) prints it with tabulations, so I was able to copy/paste it to Google Sheets.
 
-##### order_date, order_id:
--------------------------------
-
-I wanted the table to look natural. So I had to use some Python to reach it:
-
-    d = [0,0,0,0,0,1,1,1]          # this var is to make the change of days random
+    import random
+    d = [0,0,0,0,0,1,1,1]          # this var is to make the days changing
     c = 0                          # this var shows "how many days passed"
     x1 = []                        # container 1
     x2 = []                        # container 2
@@ -85,9 +93,42 @@ I wanted the table to look natural. So I had to use some Python to reach it:
     for (a, b) in x2:
         print(f'{a}\t{b}')          # printing with tabulations
 
-This script:
-1) produces the order_date and the order_id.
-2) shuffles it by small parts, so the order execution sequence looks like in a real database.
-3) prints it with tabulations, so I was able to copy/paste it to Google Sheets.
-
 ![idle_pic_1](вставить_скрин)
+
+After that I just pasted it into Google Sheets and counted the order_date
+
+![preparing_xlsx_2](скрин)
+![preparing_xlsx_3](скрин)
+
+
+#### phone_number:
+-------------------------------
+
+There were real phone numbers it this table, so I used two formulas in Google Sheets to transform this form of number 9154670185 (or 79154670185 sometimes) to 91546701
+
+  =LEFT(H2;LEN(H2)-2)
+
+  =IF(LEFT(H2,1)+0=7, RIGHT(H2,LEN(H2)-1), H2)
+
+
+
+#### Other coloumns:
+-------------------------------
+I used Python to make a random field with frequency that i needed.
+Everything were the same instead of variable "b":
+
+    import random
+    b = ['brown', 'milk', 'grey', 'blue', 'brown', 'brown', 'milk', 'milk', 'milk', 'grey']
+    for i in range(100):
+        random.shuffle(b)
+        
+    for j in b:
+        print(j)
+
+
+Other options of variable "b":
+    b = ['inst', 'fb', 'tg', 'c', 'inst', 'inst', 'fb', 'c', 'c', 'c']
+
+    b = [0.02, 0.05, 0.10, 0, 0.02, 0.05, 0, 0, 0, 0]
+    
+    b = [1,2,2,2,2,4,4,5,5,5,6,6,6,7,8,8,8,10,11,11,12,13]

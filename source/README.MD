@@ -2,7 +2,7 @@
 -------------------------------
 I have this Data-set from my workshop. I changed the information, so clients are safe :)
 
-Here you can have a [quick view](What-we-have-in-the-source) of the Data-set final version (or download the .xlsx file). I will use it to build a model of DB, then I will make a DB and some visualisation
+Here you can have a [quick view](#What-we-have-in-the-source) of the Data-set final version (or download the .xlsx file). I will use it to build a model of DB, then I will make a DB and some visualisation
 
 Also I will show you, [how I prepared](#It-was-different) the Data in the bottom :)
 
@@ -29,16 +29,16 @@ Also I will show you, [how I prepared](#It-was-different) the Data in the bottom
 ## It was different.
 -------------------------------
 
-1) [Original version](Original_version)
-2) [Coloumn repairing](Coloumn_repairing)
-  Coloumns that fixed manually:
+1) [Original version](#Original-version)
+2) [Coloumn repairing](#Coloumn-repairing)
+2.1) Coloumns that fixed manually:
   * full_name
   * city_name
   * delivery_price
-  Special coloumns:
-  * [order_date, order_id](order_date,-order_id)
-  * [phone_number](phone_number)
-  Next coloumns were made by the [similar way](Other-coloumns):
+2.2) Special coloumns:
+  * [order_date, order_id](#order_date,-order_id)
+  * [phone_number](#phone_number)
+2.3) Coloumns made by the [similar way](#Other-coloumns):
   * model_id
   * color_name
   * platform_name
@@ -75,7 +75,6 @@ This script:
 2) shuffles it by small parts, so the order execution sequence looks like in a real database.
 3) prints it with tabulations, so I was able to copy/paste it to Google Sheets.
 
-
     import random
     d = [0,0,0,0,0,1,1,1]          # this var is to make the days changing
     c = 0                          # this var shows "how many days passed"
@@ -91,6 +90,7 @@ This script:
 
     for (a, b) in x2:
         print(f'{a}\t{b}')          # printing with tabulations
+    
 
 
 ![idle_pic_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/idle_pic_1.png)

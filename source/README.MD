@@ -29,8 +29,8 @@ Also I will show you, [how I prepared](#It-was-different) the Data in the bottom
 ## It was different.
 -------------------------------
 
-1) [Original version](Original-version)
-2) [Coloumn repairing](Coloumn-repairing)
+1) [Original version](Original_version)
+2) [Coloumn repairing](Coloumn_repairing)
   Coloumns that fixed manually:
   * full_name
   * city_name
@@ -68,14 +68,13 @@ There were problems at every coloumn, so I had to fix them.
 
 
 #### order_date, order_id:
--------------------------------
-
 I wanted the table to look natural. So I had to use some Python to reach it.
 
 This script:
 1) produces the random sum of days and the order_id.
 2) shuffles it by small parts, so the order execution sequence looks like in a real database.
 3) prints it with tabulations, so I was able to copy/paste it to Google Sheets.
+
 
     import random
     d = [0,0,0,0,0,1,1,1]          # this var is to make the days changing
@@ -93,27 +92,25 @@ This script:
     for (a, b) in x2:
         print(f'{a}\t{b}')          # printing with tabulations
 
-![idle_pic_1](вставить_скрин)
+
+![idle_pic_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/idle_pic_1.png)
 
 After that I just pasted it into Google Sheets and counted the order_date
 
-![preparing_xlsx_2](скрин)
-![preparing_xlsx_3](скрин)
+![preparing_xlsx_2](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_2_formula_order_date.png)
+![preparing_xlsx_3](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_3_order_date_fin.png)
 
 
 #### phone_number:
--------------------------------
-
 There were real phone numbers it this table, so I used two formulas in Google Sheets to transform this form of number 9154670185 (or 79154670185 sometimes) to 91546701
 
-  =LEFT(H2;LEN(H2)-2)
+    =LEFT(H2;LEN(H2)-2)
 
-  =IF(LEFT(H2,1)+0=7, RIGHT(H2,LEN(H2)-1), H2)
+    =IF(LEFT(H2,1)+0=7, RIGHT(H2,LEN(H2)-1), H2)
 
 
 
 #### Other coloumns:
--------------------------------
 I used Python to make a random field with frequency that i needed.
 Everything were the same instead of variable "b":
 
@@ -127,8 +124,9 @@ Everything were the same instead of variable "b":
 
 
 Other options of variable "b":
+
     b = ['inst', 'fb', 'tg', 'c', 'inst', 'inst', 'fb', 'c', 'c', 'c']
 
     b = [0.02, 0.05, 0.10, 0, 0.02, 0.05, 0, 0, 0, 0]
-    
+
     b = [1,2,2,2,2,4,4,5,5,5,6,6,6,7,8,8,8,10,11,11,12,13]

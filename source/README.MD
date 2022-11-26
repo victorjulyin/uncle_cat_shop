@@ -1,4 +1,4 @@
-# Information from the sales dept. 
+# Information from the sales dept
 
 ### Data-set from my workshop
 
@@ -10,7 +10,7 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 
 
-## What we have in the source.
+## What we have in the source
 
 ### This is the main sheet, where we can find the basic info about the order and the client.
 ![source_screen_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss1.png)
@@ -27,25 +27,25 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 
 
-## It was different.
+## It was different
 
 1. [Original version](#Original-version)
-2. [Coloumn correction](#Coloumn-correction)
+2. [Coloumn correction](#Coloumn-correction):
 
-2.1 Coloumns that fixed manually:
-  * full_name
-  * city_name
-  * delivery_price
+ + Coloumns that fixed manually:
+    + full_name
+    + city_name
+    + delivery_price
 
-2.2 Special coloumns:
-  * [order_date, order_id](#•-order_date,-order_id)
-  * [phone_number](#•-phone_number)
+ + Special coloumns:
+    + [order_date, order_id](#•-order_date,-order_id)
+    + [phone_number](#•-phone_number)
 
-2.3 Other coloumns (made in the [same way](#•-Other-coloumns)):
-  * model_id
-  * color_name
-  * platform_name
-  * discount
+ + Other coloumns (made in the [same way](#•-Other-coloumns)):
+    + model_id
+    + color_name
+    + platform_name
+    + discount
 
 
 

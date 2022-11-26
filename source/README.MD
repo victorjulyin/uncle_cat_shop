@@ -73,6 +73,11 @@ This script:
 2) shuffles it by small parts, so the order execution sequence looks like in a real database.
 3) prints it with tabulations, so I was able to copy/paste it to Google Sheets.
 
+------
+
+
+
+
     import random
     d = [0,0,0,0,0,1,1,1]          # this var is to make the days changing
     c = 0                          # this var shows "how many days passed"
@@ -88,7 +93,6 @@ This script:
 
     for (a, b) in x2:
         print(f'{a}\t{b}')          # printing with tabulations
-    
 
 ####    •• Code result:
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/idle_pic_1.png"></p>
@@ -100,7 +104,7 @@ This script:
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_3_order_date_fin.png"></p>
 
 ### • phone_number:
-There were real phone numbers it this table, so I used two formulas in Google Sheets to transform this form of number 9154670185 (or 79154670185 sometimes) to 91546701
+There were real phone numbers in this table, so I used two formulas at Google Sheets to transform this form of number 9154670185 (sometimes 79154670185) to 91546701
 
     =LEFT(H2;LEN(H2)-2)
 
@@ -127,7 +131,3 @@ Other options of variable "b":
     b = [0.02, 0.05, 0.10, 0, 0.02, 0.05, 0, 0, 0, 0]
     b = [1,2,2,2,2,4,4,5,5,5,6,6,6,7,8,8,8,10,11,11,12,13]
 
-
-
-
-  

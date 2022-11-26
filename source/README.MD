@@ -108,7 +108,7 @@ There were real phone numbers it this table, so I used two formulas in Google Sh
 
 
 
-    * ### Other coloumns:
+### Other coloumns:
 I used Python to make a random field with frequency that i needed.
 Everything were the same instead of variable "b":
 
@@ -128,3 +128,8 @@ Other options of variable "b":
     b = [0.02, 0.05, 0.10, 0, 0.02, 0.05, 0, 0, 0, 0]
 
     b = [1,2,2,2,2,4,4,5,5,5,6,6,6,7,8,8,8,10,11,11,12,13]
+
+
+
+
+  <p align="center"><img  src="./pics/prep_xlsx_3_order_date_fin.png"></p>

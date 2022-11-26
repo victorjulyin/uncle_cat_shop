@@ -38,10 +38,10 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
     + delivery_price
 
  + Special coloumns:
-    + [order_date, order_id](#•-order_date,-order_id:)
-    + [phone_number](#•-phone_number:)
+    + [order_date, order_id](#•-order_date,-order_id)
+    + [phone_number](#•-phone_number)
 
- + Other coloumns (made in the [same way](#•-Other-coloumns:)):
+ + Other coloumns (made in the [same way](#•-Other-coloumns)):
     + model_id
     + color_name
     + platform_name
@@ -55,7 +55,7 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 ## Original version
 
-### It looked like this:
+### It looked like this
 
 ![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/past_xlsx_2.png)
 
@@ -65,7 +65,7 @@ We didn't need to keep these records very clean, because we needed more flexibil
 
 
 ## Coloumn correction
-###   • order_date, order_id:
+###   • order_date, order_id
 I wanted the table to look natural. So I had to use some Python to reach it.
 
 This script:
@@ -103,7 +103,7 @@ This script:
 ####    •• Ready coloumns:
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_3_order_date_fin.png"></p>
 
-### • phone_number:
+### • phone_number
 There were real phone numbers in this table, so I used two formulas at Google Sheets to transform this form of number 9154670185 (sometimes 79154670185) to 91546701
 
     =LEFT(H2;LEN(H2)-2)
@@ -112,7 +112,7 @@ There were real phone numbers in this table, so I used two formulas at Google Sh
 
 
 
-### • Other coloumns:
+### • Other coloumns
 I used Python to make a random field with frequency that i needed.
 Everything were the same instead of variable "b":
 

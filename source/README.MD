@@ -27,21 +27,22 @@ Also I will show you, [how I prepared](#It-was-different) the Data in the bottom
 
 
 ## It was different.
--------------------------------
+
+
 
 1) [Original version](#Original-version)
-2) [Coloumn repairing](#Coloumn-repairing)
+2) [Coloumn correction](#Coloumn-correction)
 
-2.1) Coloumns that fixed manually:
+  2.1. Coloumns that fixed manually:
   * full_name
   * city_name
   * delivery_price
 
-2.2) Special coloumns:
+   2.2. Special coloumns:
   * [order_date, order_id](#order_date,-order_id)
   * [phone_number](#phone_number)
 
-2.3) Coloumns made by the [similar way](#Other-coloumns):
+    2.3. Coloumns made by the [similar way](#Other-coloumns):
   * model_id
   * color_name
   * platform_name
@@ -64,11 +65,7 @@ As you can see, the information is not structured well, also here are a lot of o
 We didn't need to keep these records very clean, because we needed more flexibility than purity :)
 
 
-## Coloumn repairing
-
-There were problems at every coloumn, so I had to fix them.
-
-
+## Coloumn correction
 ### order_date, order_id:
 I wanted the table to look natural. So I had to use some Python to reach it.
 

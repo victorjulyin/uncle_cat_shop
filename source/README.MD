@@ -38,10 +38,10 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
     + delivery_price
 
  + Special coloumns:
-    + [order_date, order_id](#•-order_date,-order_id)
-    + [phone_number](#•-phone_number)
+    + [order_date, order_id](#I-wanted-the-table-to)
+    + [phone_number](#There-were-real-phone)
 
- + Other coloumns (made in the [same way](#•-Other-coloumns)):
+ + Other coloumns (made in the [same way](#I-used-Python-to-make)):
     + model_id
     + color_name
     + platform_name

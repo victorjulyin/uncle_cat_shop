@@ -31,16 +31,17 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 1. [Original version](#Original-version)
 2. [Coloumn correction](#Coloumn-correction)
+
 2.1 Coloumns that fixed manually:
   * full_name
   * city_name
   * delivery_price
 
 2.2 Special coloumns:
-  * [order_date, order_id](#order_date,-order_id)
-  * [phone_number](#phone_number)
+  * [order_date, order_id](#•-order_date,-order_id)
+  * [phone_number](#•-phone_number)
 
-2.3 Coloumns made by the [similar way](#Other-coloumns):
+2.3 Other coloumns (made in the [same way](#•-Other-coloumns)):
   * model_id
   * color_name
   * platform_name
@@ -59,7 +60,7 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 ![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/past_xlsx_2.png)
 
 
-As you can see, the information is not structured well, also here are a lot of omissions.
+As you can see, the information is not structured well, also here are a lot of gaps.
 We didn't need to keep these records very clean, because we needed more flexibility than purity :)
 
 
@@ -123,9 +124,7 @@ Everything were the same instead of variable "b":
 Other options of variable "b":
 
     b = ['inst', 'fb', 'tg', 'c', 'inst', 'inst', 'fb', 'c', 'c', 'c']
-
     b = [0.02, 0.05, 0.10, 0, 0.02, 0.05, 0, 0, 0, 0]
-
     b = [1,2,2,2,2,4,4,5,5,5,6,6,6,7,8,8,8,10,11,11,12,13]
 
 

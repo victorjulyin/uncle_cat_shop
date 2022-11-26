@@ -38,7 +38,7 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
     + delivery_price
 
  + Special coloumns:
-    + [order_date, order_id](#I-wanted-the-table-to)
+    + [order_date, order_id](#I-wanted-the-table-to-look-natural)
     + [phone_number](#There-were-real-phone)
 
  + Other coloumns (made in the [same way](#I-used-Python-to-make)):

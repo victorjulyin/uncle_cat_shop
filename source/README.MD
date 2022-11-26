@@ -1,15 +1,16 @@
 # Information from the sales dept. 
--------------------------------
-I have this Data-set from my workshop. I changed the information, so clients are safe :)
 
-Here you can have a [quick view](#What-we-have-in-the-source) of the Data-set final version (or download the .xlsx file). I will use it to build a model of DB, then I will make a DB and some visualisation
+### Data-set from my workshop
 
-Also I will show you, [how I prepared](#It-was-different) the Data in the bottom :)
+I changed the information, so clients are safe :)
+
+Here you can have a [quick view](#What-we-have-in-the-source) of the Data-set final version (or download the [.xlsx file](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/UncleCat_store_final.xlsx)). I will use it to build a model of DB, then I will make a DB and some visualisation
+
+Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 
 
 ## What we have in the source.
--------------------------------
 
 ##### This is the main sheet, where we can find the basic info about the order and the client.
 ![source_screen_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss1.png)

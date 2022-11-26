@@ -132,4 +132,4 @@ Other options of variable "b":
 
 
 
-  <p align="center"><img  src="./pics/prep_xlsx_3_order_date_fin.png"></p>
+  <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_2_formula_order_date.png"></p>

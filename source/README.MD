@@ -64,7 +64,7 @@ We didn't need to keep these records very clean, because we needed more flexibil
 
 
 ## Coloumn correction
-### * order_date, order_id:
+###   • order_date, order_id:
 I wanted the table to look natural. So I had to use some Python to reach it.
 
 This script:
@@ -89,16 +89,16 @@ This script:
         print(f'{a}\t{b}')          # printing with tabulations
     
 
-#### Code result:
+####    •• Code result:
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/idle_pic_1.png"></p>
 
-#### Pasted into Google sheets:
+####    •• Pasted into Google sheets:
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_2_formula_order_date.png"></p>
 
-#### Ready coloumns:
+####    •• Ready coloumns:
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_3_order_date_fin.png"></p>
 
-### * phone_number:
+### • phone_number:
 There were real phone numbers it this table, so I used two formulas in Google Sheets to transform this form of number 9154670185 (or 79154670185 sometimes) to 91546701
 
     =LEFT(H2;LEN(H2)-2)
@@ -107,7 +107,7 @@ There were real phone numbers it this table, so I used two formulas in Google Sh
 
 
 
-### * Other coloumns:
+### • Other coloumns:
 I used Python to make a random field with frequency that i needed.
 Everything were the same instead of variable "b":
 

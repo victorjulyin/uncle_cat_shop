@@ -12,16 +12,16 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 ## What we have in the source.
 
-##### This is the main sheet, where we can find the basic info about the order and the client.
+### This is the main sheet, where we can find the basic info about the order and the client.
 ![source_screen_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss1.png)
 
-##### This sheet is for the information about returned orders.
+### This sheet is for the information about returned orders.
 ![source_screen_2](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss2.png)
 
-##### We can find some info about products here
+### We can find some info about products here
 ![source_screen_3](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss3.png)
 
-##### Here is the info about the employees and the completed orders
+### Here is the info about the employees and the completed orders
 ![source_screen_4](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss4.png)
 
 
@@ -29,21 +29,18 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 ## It was different.
 
-
-
-1) [Original version](#Original-version)
-2) [Coloumn correction](#Coloumn-correction)
-
-  2.1. Coloumns that fixed manually:
+1. [Original version](#Original-version)
+2. [Coloumn correction](#Coloumn-correction)
+2.1 Coloumns that fixed manually:
   * full_name
   * city_name
   * delivery_price
 
-   2.2. Special coloumns:
+2.2 Special coloumns:
   * [order_date, order_id](#order_date,-order_id)
   * [phone_number](#phone_number)
 
-    2.3. Coloumns made by the [similar way](#Other-coloumns):
+2.3 Coloumns made by the [similar way](#Other-coloumns):
   * model_id
   * color_name
   * platform_name
@@ -57,7 +54,7 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 ## Original version
 
-When I started the work with the source file, it looked like this:
+### It looked like this:
 
 ![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/past_xlsx_2.png)
 
@@ -92,12 +89,13 @@ This script:
         print(f'{a}\t{b}')          # printing with tabulations
     
 
-
+#### Code result
 ![idle_pic_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/idle_pic_1.png)
 
-After that I just pasted it into Google Sheets and counted the order_date
-
+#### Pasted into Google sheets
 ![preparing_xlsx_2](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_2_formula_order_date.png)
+
+#### Ready coloumns
 ![preparing_xlsx_3](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_3_order_date_fin.png)
 
 
@@ -110,7 +108,7 @@ There were real phone numbers it this table, so I used two formulas in Google Sh
 
 
 
-### Other coloumns:
+    * ### Other coloumns:
 I used Python to make a random field with frequency that i needed.
 Everything were the same instead of variable "b":
 

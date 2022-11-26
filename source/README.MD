@@ -38,7 +38,7 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
     + delivery_price
 
  + Special coloumns:
-    + [order_date, order_id](#order_date,-order_id)
+    + [order_date, order_id](#order_date-and-order_id)
     + [phone_number](#phone_number)
 
  + Other coloumns (made in the [same way](#Other-coloumns)):
@@ -65,7 +65,7 @@ We didn't need to keep these records very clean, because we needed more flexibil
 
 
 ## Coloumn correction
-### order_date, order_id
+### order_date and order_id
 I wanted the table to look natural. So I had to use some Python to reach it.
 
 This script:

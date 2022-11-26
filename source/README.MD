@@ -31,13 +31,16 @@ Also I will show you, [how I prepared](#It-was-different) the Data in the bottom
 
 1) [Original version](#Original-version)
 2) [Coloumn repairing](#Coloumn-repairing)
+
 2.1) Coloumns that fixed manually:
   * full_name
   * city_name
   * delivery_price
+
 2.2) Special coloumns:
   * [order_date, order_id](#order_date,-order_id)
   * [phone_number](#phone_number)
+
 2.3) Coloumns made by the [similar way](#Other-coloumns):
   * model_id
   * color_name
@@ -51,7 +54,7 @@ Also I will show you, [how I prepared](#It-was-different) the Data in the bottom
 
 
 ## Original version
--------------------------------
+
 When I started the work with the source file, it looked like this:
 
 ![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/past_xlsx_2.png)
@@ -62,12 +65,11 @@ We didn't need to keep these records very clean, because we needed more flexibil
 
 
 ## Coloumn repairing
--------------------------------
 
 There were problems at every coloumn, so I had to fix them.
 
 
-**order_date, order_id**:
+### order_date, order_id:
 I wanted the table to look natural. So I had to use some Python to reach it.
 
 This script:
@@ -101,7 +103,7 @@ After that I just pasted it into Google Sheets and counted the order_date
 ![preparing_xlsx_3](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_3_order_date_fin.png)
 
 
-**phone_number**:
+### phone_number:
 There were real phone numbers it this table, so I used two formulas in Google Sheets to transform this form of number 9154670185 (or 79154670185 sometimes) to 91546701
 
     =LEFT(H2;LEN(H2)-2)
@@ -110,7 +112,7 @@ There were real phone numbers it this table, so I used two formulas in Google Sh
 
 
 
-**Other coloumns**:
+### Other coloumns:
 I used Python to make a random field with frequency that i needed.
 Everything were the same instead of variable "b":
 

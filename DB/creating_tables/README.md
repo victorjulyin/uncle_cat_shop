@@ -3,12 +3,12 @@
 
 1) [Table "region"](#Region)
 2) [Table "customer"](#Customer)
-3) Table "category"
-4) Table "sub_category"
-5) Table "product"
-6) Table "shipping"
-7) Table "date"
-8) Table "the_order"
+3) [Table "category"](#Category)
+4) [Table "sub_category"](#sub_category)
+5) [Table "product"](#product)
+6) [Table "shipping"](#shipping)
+7) [Table "date"](#date)
+8) [Table "the_order"](#the_order)
 
 
 
@@ -45,7 +45,7 @@
     );
 
 
-### Table "category"
+### Category
 
     CREATE TABLE "category"
     (
@@ -54,7 +54,7 @@
      CONSTRAINT "PK_9" PRIMARY KEY ( "category_id" )
     );
 
-### Table "sub_category"
+### Sub_category
 
     CREATE TABLE "sub_category"
     (
@@ -71,7 +71,7 @@
     );
 
 
-### Table "product"
+### Product
 
     CREATE TABLE "product"
     (
@@ -88,7 +88,7 @@
     );
 
 
-### Table "shipping"
+### Shipping
 
 
     CREATE TABLE "shipping"
@@ -99,7 +99,7 @@
     );
 
 
-### Table "date"
+### Date
 
 
     CREATE TABLE "date"
@@ -113,7 +113,7 @@
     );
 
 
-### Table "the_order"
+### The_order
 
 
     CREATE TABLE "the_order"
@@ -155,10 +155,3 @@
     (
      "date_id"
     );
-
-
-
-
-
-
-

@@ -1,8 +1,8 @@
 # SQL-queries to create tables
 ### A map
 
-1) [Table "region"](#Table-"region")
-2) Table "customer"
+1) [Table "region"](#Region)
+2) [Table "customer"](#Customer)
 3) Table "category"
 4) Table "sub_category"
 5) Table "product"
@@ -12,7 +12,7 @@
 
 
 
-### Table "region"
+### Region
 
     CREATE TABLE "region"
     (
@@ -23,7 +23,7 @@
     );
 
 
-### Table "customer"
+### Customer
 
     CREATE TABLE "customer"
     (

@@ -1,5 +1,9 @@
 # Creating Data Base on PostgreSQL
 ## Data Model
+### General model
+(Нарисовать, как будет выглядеть в общем наша модель - слои)
+
+
 ### Little Snowflake
 I built this model at sqldbm.com.
 

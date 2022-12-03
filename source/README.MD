@@ -13,16 +13,17 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 ## What we have in the source
 
 ### This is the main sheet, where we can find the basic info about the order and the client.
-![source_screen_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss1.png)
+![source_screen_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/ss1.png)
 
 ### This sheet is for the information about returned orders.
-![source_screen_2](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss2.png)
+![source_screen_2](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/ss2.png)
 
 ### We can find some info about products here
-![source_screen_3](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss3.png)
+![source_screen_3](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/ss3.png)
 
 ### Here is the info about the employees and the completed orders
-![source_screen_4](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/ss4.png)
+![source_screen_4](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/ss4.png)
+
 
 
 
@@ -57,7 +58,7 @@ Also you can look, [how I prepared](#It-was-different) the Data in the bottom :)
 
 ### It looked like this
 
-![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/past_xlsx_2.png)
+![past_source_1](https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/past_xlsx_2.png)
 
 
 As you can see, the information is not structured well, also here are a lot of gaps.
@@ -95,13 +96,13 @@ This script:
         print(f'{a}\t{b}')          # printing with tabulations
 
 ####    •• Code result:
-<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/idle_pic_1.png"></p>
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/idle_pic_1.png"></p>
 
 ####    •• Pasted into Google sheets:
-<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_2_formula_order_date.png"></p>
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/prep_xlsx_2_formula_order_date.png"></p>
 
 ####    •• Ready coloumns:
-<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/pics/prep_xlsx_3_order_date_fin.png"></p>
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source_pics/prep_xlsx_3_order_date_fin.png"></p>
 
 ### phone_number
 There were real phone numbers in this table, so I used two formulas at Google Sheets to transform this form of number 9154670185 (sometimes 79154670185) to 91546701

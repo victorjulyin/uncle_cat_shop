@@ -5,7 +5,6 @@
 ### Sample: table "workshop"
 
 ### I made necessary queries by CONCATENATE formula.
-(скрин с формулами)
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/sql_source1.png"></p>
 
 ### Parts of the formula above.
@@ -14,15 +13,13 @@
 ### Result
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/sql_source3.png"></p>
 
+### Repeat with another tables
+You can find the SQL-queries [here](https://github.com/victorjulyin/uncle_cat_shop/tree/main/source/source%20Postgres/sql-queries)
 
 
-
-
-
-
-
-
-I used Dbeaver to create and fill the source DB on my computer
+## Using DBeaver
+PostreSQL is installed on my computer.
+I used DBeaver to create and fill the source DB.
 
 (Показать процесс создания sql-запросов для наполнения БД данными из экселя)
 

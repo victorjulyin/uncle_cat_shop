@@ -6,12 +6,13 @@
 
 ### I made necessary queries by CONCATENATE formula.
 (скрин с формулами)
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/sql_source1.png"></p>
 
 ### Parts of the formula above.
-(скрин с штучками)
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/sql_source2.png"></p>
 
 ### Result
-(скрин с результатом)
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/sql_source3.png"></p>
 
 
 

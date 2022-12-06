@@ -1,5 +1,7 @@
 # Creating Data Base on PostgreSQL
+
 ## Data Model
+
 ### General model
 (Нарисовать, как будет выглядеть в общем наша модель - слои)
 
@@ -7,7 +9,16 @@
 ### Little Snowflake
 I built this model at sqldbm.com.
 
-<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/DB/db_pics/data_model1.png"></p>
+<p align="center"><img  src="______________"></p>
 
-## Creating tables
 
+
+## SQL-queries to fill DB storage layer
+
+
+
+
+Какие папки нужно создать:
+1) папка с sql-запросами,  которые будут вытаскивать инфу из сурс, чтобы потом с помощью них вставить эту инфу в созданные таблицы => пример получившейся таблицы
+2) папка, в которой рассказывается про Модель данных (в ней же файл с sql-запросами для создания самих таблиц)
+*3) Сделать ридми в папке сурс и там оформить, о чем вообще речь

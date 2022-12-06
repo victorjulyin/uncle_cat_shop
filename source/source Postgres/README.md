@@ -22,12 +22,14 @@ PostreSQL is installed on my computer.
 I used DBeaver to create and fill the source DB.
 
 ### Table list
-(screen dbeaver1)
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/dbeaver1.png"></p>
+
 
 ### Table sample
-(screen dbeaver2)
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/dbeaver2.png"></p>
 
-(Показать процесс создания sql-запросов для наполнения БД данными из экселя)
+## The source is ready
+Now we can work on the [data model]()
 
 
 

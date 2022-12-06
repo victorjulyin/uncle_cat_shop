@@ -1,4 +1,4 @@
-# The source DB creation
+# The DB source layer creation
 
 ## Creating SQL-queries to fill source DB
 
@@ -28,7 +28,7 @@ I used DBeaver to create and fill the source DB.
 ### Table sample
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/source/source%20Postgres/pics/dbeaver2.png"></p>
 
-## The source is ready
+## The source layer is ready
 Now we can work on the [data model](https://github.com/victorjulyin/uncle_cat_shop/tree/main/Data%20Model%20and%20DB)
 
 

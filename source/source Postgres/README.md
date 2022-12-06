@@ -21,6 +21,12 @@ You can find the SQL-queries [here](https://github.com/victorjulyin/uncle_cat_sh
 PostreSQL is installed on my computer.
 I used DBeaver to create and fill the source DB.
 
+### Table list
+(screen dbeaver1)
+
+### Table sample
+(screen dbeaver2)
+
 (Показать процесс создания sql-запросов для наполнения БД данными из экселя)
 
 

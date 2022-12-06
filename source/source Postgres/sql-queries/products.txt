@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS products;
+CREATE TABLE products(
+model_ID        INTEGER  NOT NULL PRIMARY KEY
+,model_name     VARCHAR(25) NOT NULL
+,price        INTEGER  NOT NULL
+,volume        decimal  NOT NULL
+,weight        INTEGER  NOT NULL
+);
+
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (1,'Rome',4190,0.0555,15);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (2,'Prague',3990,0.0555,15);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (3,'Oslo Premium',2690,0.04107,7);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (4,'Spb',6090,0.099,19);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (5,'Maine Coon',7240,0.105,25);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (6,'Maine Coon Premium',9390,0.1225,28);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (7,'Maine Coon Mini',5440,0.105,17);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (8,'New York',8190,0.14,28);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (9,'Oslo',1990,0.04107,5);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (10,'Maine Coon Nano',3790,0.0777,12);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (11,'Dublin',5790,0.0777,19);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (12,'Paris',10190,0.16,30);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (13,'Boston',9930,0.14,32);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (14,'Prague Mini',3190,0.04625,13);
+INSERT INTO products(model_id,model_name,price,volume,weight) VALUES (15,'Juliette',8240,0.0693,15);

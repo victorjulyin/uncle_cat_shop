@@ -1,0 +1,203 @@
+DROP TABLE IF EXISTS calendar;
+CREATE TABLE calendar
+(
+ date_id   int NOT NULL,
+ full_date date NOT NULL,
+ year      int NOT NULL,
+ month     int NOT NULL,
+ day       int NOT NULL,
+ CONSTRAINT PK_calendar PRIMARY KEY ( date_id )
+);
+
+
+
+
+DROP TABLE IF EXISTS city;
+CREATE TABLE city
+(
+ city_id             int NOT NULL,
+ city_name           varchar(30) NOT NULL,
+ base_delivery_price int NOT NULL,
+ CONSTRAINT PK_city PRIMARY KEY ( city_id )
+);
+
+
+
+
+DROP TABLE IF EXISTS client;
+CREATE TABLE client
+(
+ client_id int NOT NULL,
+ city_id   int NOT NULL,
+ full_name varchar(30) NOT NULL,
+ phone     int NOT NULL,
+ CONSTRAINT PK_client PRIMARY KEY ( client_id ),
+ CONSTRAINT FK_4_1 FOREIGN KEY ( city_id ) REFERENCES city ( city_id )
+);
+
+CREATE INDEX FK_client1 ON client
+(
+ city_id
+);
+
+
+
+
+DROP TABLE IF EXISTS color;
+CREATE TABLE color
+(
+ color_id   int NOT NULL,
+ color_name varchar(15) NOT NULL,
+ CONSTRAINT PK_color PRIMARY KEY ( color_id )
+);
+
+
+
+DROP TABLE IF EXISTS master;
+CREATE TABLE master
+(
+ master_id   int NOT NULL,
+ master_name varchar(20) NOT NULL,
+ CONSTRAINT PK_master PRIMARY KEY ( master_id )
+);
+
+
+
+DROP TABLE IF EXISTS platform;
+CREATE TABLE platform
+(
+ platform_id   int NOT NULL,
+ platform_name varchar(10) NOT NULL,
+ CONSTRAINT PK_platform PRIMARY KEY ( platform_id )
+);
+
+
+
+DROP TABLE IF EXISTS product;
+CREATE TABLE product
+(
+ product_id           int NOT NULL,
+ product_name         varchar(20) NOT NULL,
+ price                int NOT NULL,
+ volume               float NOT NULL,
+ weight               int NOT NULL,
+ extra_delivery_price int NOT NULL,
+ CONSTRAINT PK_product PRIMARY KEY ( product_id )
+);
+
+
+
+
+DROP TABLE IF EXISTS returned;
+CREATE TABLE returned
+(
+ return_id int NOT NULL,
+ order_id  int NOT NULL,
+ CONSTRAINT PK_returned PRIMARY KEY ( return_id ),
+ CONSTRAINT FK_7 FOREIGN KEY ( order_id ) REFERENCES ordered ( order_id )
+);
+
+CREATE INDEX FK_returned1 ON returned
+(
+ order_id
+);
+
+
+
+
+DROP TABLE IF EXISTS status;
+CREATE TABLE status
+(
+ status_id        int NOT NULL,
+ status_name      varchar(20) NOT NULL,
+ allowable_period int NOT NULL,
+ CONSTRAINT PK_status PRIMARY KEY ( status_id )
+);
+
+
+
+
+DROP TABLE IF EXISTS workshop;
+CREATE TABLE workshop
+(
+ produce_id  int NOT NULL,
+ order_id    int NOT NULL,
+ date_start  int NOT NULL,
+ date_finish int NULL,
+ master_id   int NOT NULL,
+ CONSTRAINT PK_workshop PRIMARY KEY ( produce_id ),
+ CONSTRAINT FK_9 FOREIGN KEY ( order_id ) REFERENCES ordered ( order_id ),
+ CONSTRAINT FK_10 FOREIGN KEY ( master_id ) REFERENCES master ( master_id ),
+ CONSTRAINT FK_11 FOREIGN KEY ( date_finish ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_12 FOREIGN KEY ( date_start ) REFERENCES calendar ( date_id )
+);
+
+CREATE INDEX FK_workshop1 ON workshop
+(
+ order_id
+);
+
+CREATE INDEX FK_workshop2 ON workshop
+(
+ master_id
+);
+
+CREATE INDEX FK_workshop3 ON workshop
+(
+ date_finish
+);
+
+CREATE INDEX FK_workshop4 ON workshop
+(
+ date_start
+);
+
+
+
+
+DROP TABLE IF EXISTS ordered;
+CREATE TABLE ordered
+(
+ order_id            int NOT NULL,
+ date_order          int NOT NULL,
+ date_ready          int NULL,
+ date_sent           int NULL,
+ date_delivered      int NULL,
+ product_id          int NOT NULL,
+ platform_id         int NOT NULL,
+ client_id           int NOT NULL,
+ status_id           int NOT NULL,
+ color_id            int NOT NULL,
+ discount            int NULL,
+ full_delivery_price int NOT NULL,
+ total_price         int NOT NULL,
+ CONSTRAINT PK_ordered PRIMARY KEY ( order_id ),
+ CONSTRAINT FK_1 FOREIGN KEY ( product_id ) REFERENCES product ( product_id ),
+ CONSTRAINT FK_3 FOREIGN KEY ( color_id ) REFERENCES color ( color_id ),
+ CONSTRAINT FK_4 FOREIGN KEY ( status_id ) REFERENCES status ( status_id ),
+ CONSTRAINT FK_5 FOREIGN KEY ( client_id ) REFERENCES client ( client_id ),
+ CONSTRAINT FK_6 FOREIGN KEY ( date_order ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_8 FOREIGN KEY ( platform_id ) REFERENCES platform ( platform_id ),
+ CONSTRAINT FK_13 FOREIGN KEY ( date_ready ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_14 FOREIGN KEY ( date_sent ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_15 FOREIGN KEY ( date_delivered ) REFERENCES calendar ( date_id )
+);
+
+CREATE INDEX FK_ordered1 ON ordered
+(product_id);
+CREATE INDEX FK_ordered2 ON ordered
+(color_id);
+CREATE INDEX FK_ordered3 ON ordered
+(status_id);
+CREATE INDEX FK_ordered4 ON ordered
+(client_id);
+CREATE INDEX FK_ordered5 ON ordered
+(date_order);
+CREATE INDEX FK_ordered6 ON ordered
+(platform_id);
+CREATE INDEX FK_ordered7 ON ordered
+(date_ready);
+CREATE INDEX FK_ordered8 ON ordered
+(date_sent);
+CREATE INDEX FK_ordered9 ON ordered
+(date_delivered);

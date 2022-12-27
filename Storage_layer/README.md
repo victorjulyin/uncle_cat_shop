@@ -50,21 +50,14 @@ If you want to know what problems I had and more about this process:
 
 ### Table "city"
 
-FINAL PICTURE
-
-ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ
-ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ
-ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ
-ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ
-ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ
-ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ ДОПОЛНИТЬ
+<p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/Storage_layer/pics/city_table3.png"></p>
 
 #### Problems 
 
   1) Letter case
   2) Spaces
   3) Marks
-  4) There was no info about base delivery price at the source (I decided to make it later). So I should insert this info into our DW now
+  4) There was no info about base delivery price at the source (I decided to make it after the source creation). So I should insert this info into our DW now
 
 
 #### 1-3) You can look at these problems here:
@@ -91,7 +84,38 @@ After that I just found marks manually and corrected it:
 <p align="center"><img  src="https://github.com/victorjulyin/uncle_cat_shop/blob/main/Storage_layer/pics/city_table2.png"></p>
 
 
-#### 4) I had to create a table with base delivery prices in xlsx and add it into a DW
+#### 4) I decided to create a table with base delivery prices in xlsx and add it into a DW
+
+I just found distinct cities and put random price
+
+Result that I had in xlsx:
+
+  |city_id | city_name	 | base_price |
+  -------------------------------------
+  |  101   | аксаково	   | 400        |
+  |  102   | алексин	   | 300        |
+  |  103   | ангарск	   | 400        |
+  |  104   | арсеньев	   | 300        |
+  |  105   | архангельск | 200        |
+  |  ...   | ...         | ...        |
+
+
+As usual, I just created SQL-queries for table filling:
+
+  INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (101,'аксаково',400);
+  INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (102,'алексин',300);
+  INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (103,'ангарск',400);
+  INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (104,'арсеньев',300);
+  INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (105,'архангельск',200);
+  ...
+
+
+
+### Table "platform"
+
+
+
+
 
 
 

@@ -1,0 +1,480 @@
+
+--SCHEMA "u_dw"
+
+CREATE SCHEMA u_dw;
+
+----------------------------------------------------------------------------------------------
+
+--TABLE "city"
+
+
+DROP TABLE IF EXISTS u_dw.city;
+CREATE TABLE u_dw.city
+(
+ city_id             int NOT NULL,
+ city_name           varchar(30) NOT NULL,
+ base_delivery_price int NOT NULL,
+ CONSTRAINT PK_city PRIMARY KEY ( city_id )
+);
+
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (101,'аксаково',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (102,'алексин',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (103,'ангарск',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (104,'арсеньев',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (105,'архангельск',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (106,'астрахань',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (107,'балашиха',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (108,'боброво',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (109,'большой камень',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (110,'брянск',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (111,'видное',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (112,'владивосток',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (113,'владикавказ',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (114,'владимир',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (115,'внуково',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (116,'внуковское',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (117,'волгоград',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (118,'вологда',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (119,'вольгинский',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (120,'воронеж',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (121,'всеволожск',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (122,'гатчина',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (123,'геленджик',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (124,'горьковка',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (125,'дербент',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (126,'долгопрудный',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (127,'домодедово',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (128,'дубнево',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (129,'екатеринбург',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (130,'елабуга',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (131,'ерино',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (132,'железнодорожный',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (133,'жуковка',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (134,'жуковский',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (135,'заречье',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (136,'зеленоград',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (137,'ивантеевка',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (138,'икрутск',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (139,'икша',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (140,'иркутск',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (141,'йошкар ола',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (142,'казань',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (143,'какузево',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (144,'калуга',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (145,'кандалакша',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (146,'кемерово',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (147,'кимры',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (148,'киров',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (149,'клин',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (150,'ковров',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (151,'коломна',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (152,'коммунарка',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (153,'королев',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (154,'корсаков',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (155,'котельники',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (156,'красково',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (157,'красногорск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (158,'краснодар',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (159,'краснознаменск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (160,'красноярск',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (161,'кудрово',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (162,'лесной городок',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (163,'липецк',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (164,'лобня',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (165,'лопатино',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (166,'люберцы',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (167,'магадан',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (168,'майкоп',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (169,'малаховка',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (170,'малоярославец',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (171,'махачкала',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (172,'мисайлово',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (173,'можайск',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (174,'москва',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (175,'московский',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (176,'мосрентген',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (177,'мурино',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (178,'мурманск',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (179,'мытищи',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (180,'набережные челны',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (181,'нагорное',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (182,'назарово',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (183,'нальчик',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (184,'невинномысск',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (185,'нижний новгород',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (186,'николаевка',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (187,'новозыбков',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (188,'новомосковск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (189,'новороссийск',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (190,'новосибирск',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (191,'новоуральск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (192,'новочеркасск',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (193,'ногинск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (194,'норильск',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (195,'обнинск',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (196,'одинцово',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (197,'октябрьский',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (198,'оренбург',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (199,'островцы',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (200,'парголово',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (201,'петропавловск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (202,'пироговский',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (203,'подольск',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (204,'прохладный',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (205,'путилково',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (206,'пушкин',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (207,'пушкино',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (208,'раменское',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (209,'реутов',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (210,'ростов на дону',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (211,'руза',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (212,'рязань',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (213,'самара',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (214,'санкт-петербург',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (215,'саранск',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (216,'саратов',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (217,'саров',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (218,'селятино',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (219,'сергиев посад',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (220,'сергиевск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (221,'серпухов',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (222,'сертолово',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (223,'смоленск',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (224,'солнечногорск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (225,'сосенское',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (226,'спасс дальний',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (227,'спб',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (228,'ставрополь',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (229,'сургут',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (230,'сходня',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (231,'сыктывкар',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (232,'таганрог',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (233,'тамбов',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (234,'тверь',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (235,'томилино',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (236,'томск',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (237,'торжок',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (238,'троицк',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (239,'тула',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (240,'тюмень',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (241,'ульяновск',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (242,'усинск',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (243,'уссурийск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (244,'уфа',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (245,'фрязино',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (246,'ханты мансийск',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (247,'химки',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (248,'челябинск',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (249,'череповец',200);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (250,'чехов',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (251,'шушары',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (252,'шуя',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (253,'щелково',500);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (254,'щербинка',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (255,'электроизолятор',400);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (256,'электросталь',300);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (257,'янино',450);
+INSERT INTO u_dw.city(city_id, city_name, base_delivery_price) VALUES (258,'ярославль',400);
+
+----------------------------------------------------------------------------------------------
+
+
+--TABLE "platform"
+
+DROP TABLE IF EXISTS u_dw.platform;
+CREATE TABLE u_dw.platform
+(
+ platform_id   int NOT NULL,
+ platform_name varchar(10) NOT NULL,
+ CONSTRAINT PK_platform PRIMARY KEY ( platform_id )
+);
+
+INSERT INTO u_dw.platform
+SELECT ROW_NUMBER() OVER(), platform_name
+FROM (SELECT DISTINCT(platform_name)
+      FROM public.orders
+      ORDER BY 1) as in_q;
+
+
+----------------------------------------------------------------------------------------------
+
+--TABLE "calendar"
+
+
+
+
+DROP TABLE IF EXISTS u_dw.calendar;
+CREATE TABLE u_dw.calendar
+(
+ date_id   int NOT NULL,
+ full_date date NOT NULL,
+ year      int NOT NULL,
+ month     int NOT NULL,
+ day       int NOT NULL,
+ CONSTRAINT PK_calendar PRIMARY KEY ( date_id )
+);
+
+
+INSERT INTO u_dw.calendar
+SELECT ROW_NUMBER() OVER(), d_o, year, month, day
+FROM (SELECT DISTINCT(date_order) as d_o, 
+       extract(year from date_order) as year,
+       extract(month from date_order) as month,
+       extract(day from date_order) as day
+FROM public.orders
+ORDER BY 1) as in_q;
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+--TABLE "client"
+
+
+
+DROP TABLE IF EXISTS u_dw.client;
+CREATE TABLE u_dw.client
+(
+ client_id int NOT NULL,
+ city_id   int NOT NULL,
+ full_name varchar(50) NOT NULL,
+ phone     int NOT NULL,
+ CONSTRAINT PK_client PRIMARY KEY ( client_id ),
+ CONSTRAINT FK_4_1 FOREIGN KEY ( city_id ) REFERENCES u_dw.city ( city_id )
+);
+
+CREATE INDEX FK_client1 ON u_dw.client
+(
+ city_id
+);
+
+
+INSERT INTO u_dw.client
+SELECT ROW_NUMBER() OVER(), one, two, three
+FROM (SELECT city_id as one,
+       full_name as two,
+       phone_number as three
+FROM public.orders INNER JOIN u_dw.city 
+USING(city_name)
+ORDER BY 2) as in_q;
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+--TABLE "color"
+
+
+DROP TABLE IF EXISTS u_dw.color;
+CREATE TABLE u_dw.color
+(
+ color_id   int NOT NULL,
+ color_name varchar(15) NOT NULL,
+ CONSTRAINT PK_color PRIMARY KEY ( color_id )
+);
+
+
+INSERT INTO u_dw.color
+SELECT ROW_NUMBER() OVER(), c
+FROM (SELECT DISTINCT(color_name) as c
+FROM public.orders
+ORDER BY 1) as in_q;
+
+
+
+----------------------------------------------------------------------------------------------
+
+
+--TABLE "master"
+
+
+DROP TABLE IF EXISTS u_dw.master;
+CREATE TABLE u_dw.master
+(
+ master_id   int NOT NULL,
+ master_name varchar(20) NOT NULL,
+ CONSTRAINT PK_master PRIMARY KEY ( master_id )
+);
+
+
+INSERT INTO u_dw.master
+SELECT ROW_NUMBER() OVER(), n
+FROM (SELECT DISTINCT(master_name) AS n
+FROM public.workshop
+ORDER BY 1) as in_q;
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+
+--TABLE "product"
+
+
+DROP TABLE IF EXISTS u_dw.product;
+CREATE TABLE u_dw.product
+(
+ product_id           int NOT NULL,
+ product_name         varchar(20) NOT NULL,
+ price                int NOT NULL,
+ volume               float NOT NULL,
+ weight               int NOT NULL,
+ extra_delivery_price int NOT NULL,
+ CONSTRAINT PK_product PRIMARY KEY ( product_id )
+);
+
+
+INSERT INTO u_dw.product
+SELECT DISTINCT(model_id),  
+       model_name,
+       price, 
+       volume, 
+       weight, 
+       volume * 2500
+FROM public.products
+ORDER BY 1;
+
+
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+
+
+DROP TABLE IF EXISTS returned;
+CREATE TABLE returned
+(
+ return_id int NOT NULL,
+ order_id  int NOT NULL,
+ CONSTRAINT PK_returned PRIMARY KEY ( return_id ),
+ CONSTRAINT FK_7 FOREIGN KEY ( order_id ) REFERENCES ordered ( order_id )
+);
+
+CREATE INDEX FK_returned1 ON returned
+(
+ order_id
+);
+
+
+
+
+DROP TABLE IF EXISTS status;
+CREATE TABLE status
+(
+ status_id        int NOT NULL,
+ status_name      varchar(20) NOT NULL,
+ allowable_period int NOT NULL,
+ CONSTRAINT PK_status PRIMARY KEY ( status_id )
+);
+
+
+
+
+DROP TABLE IF EXISTS workshop;
+CREATE TABLE workshop
+(
+ produce_id  int NOT NULL,
+ order_id    int NOT NULL,
+ date_start  int NOT NULL,
+ date_finish int NULL,
+ master_id   int NOT NULL,
+ CONSTRAINT PK_workshop PRIMARY KEY ( produce_id ),
+ CONSTRAINT FK_9 FOREIGN KEY ( order_id ) REFERENCES ordered ( order_id ),
+ CONSTRAINT FK_10 FOREIGN KEY ( master_id ) REFERENCES master ( master_id ),
+ CONSTRAINT FK_11 FOREIGN KEY ( date_finish ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_12 FOREIGN KEY ( date_start ) REFERENCES calendar ( date_id )
+);
+
+CREATE INDEX FK_workshop1 ON workshop
+(
+ order_id
+);
+
+CREATE INDEX FK_workshop2 ON workshop
+(
+ master_id
+);
+
+CREATE INDEX FK_workshop3 ON workshop
+(
+ date_finish
+);
+
+CREATE INDEX FK_workshop4 ON workshop
+(
+ date_start
+);
+
+
+
+
+DROP TABLE IF EXISTS ordered;
+CREATE TABLE ordered
+(
+ order_id            int NOT NULL,
+ date_order          int NOT NULL,
+ date_ready          int NULL,
+ date_sent           int NULL,
+ date_delivered      int NULL,
+ product_id          int NOT NULL,
+ platform_id         int NOT NULL,
+ client_id           int NOT NULL,
+ status_id           int NOT NULL,
+ color_id            int NOT NULL,
+ discount            int NULL,
+ full_delivery_price int NOT NULL,
+ total_price         int NOT NULL,
+ CONSTRAINT PK_ordered PRIMARY KEY ( order_id ),
+ CONSTRAINT FK_1 FOREIGN KEY ( product_id ) REFERENCES product ( product_id ),
+ CONSTRAINT FK_3 FOREIGN KEY ( color_id ) REFERENCES color ( color_id ),
+ CONSTRAINT FK_4 FOREIGN KEY ( status_id ) REFERENCES status ( status_id ),
+ CONSTRAINT FK_5 FOREIGN KEY ( client_id ) REFERENCES client ( client_id ),
+ CONSTRAINT FK_6 FOREIGN KEY ( date_order ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_8 FOREIGN KEY ( platform_id ) REFERENCES platform ( platform_id ),
+ CONSTRAINT FK_13 FOREIGN KEY ( date_ready ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_14 FOREIGN KEY ( date_sent ) REFERENCES calendar ( date_id ),
+ CONSTRAINT FK_15 FOREIGN KEY ( date_delivered ) REFERENCES calendar ( date_id )
+);
+
+CREATE INDEX FK_ordered1 ON ordered
+(product_id);
+CREATE INDEX FK_ordered2 ON ordered
+(color_id);
+CREATE INDEX FK_ordered3 ON ordered
+(status_id);
+CREATE INDEX FK_ordered4 ON ordered
+(client_id);
+CREATE INDEX FK_ordered5 ON ordered
+(date_order);
+CREATE INDEX FK_ordered6 ON ordered
+(platform_id);
+CREATE INDEX FK_ordered7 ON ordered
+(date_ready);
+CREATE INDEX FK_ordered8 ON ordered
+(date_sent);
+CREATE INDEX FK_ordered9 ON ordered
+(date_delivered);
+
+

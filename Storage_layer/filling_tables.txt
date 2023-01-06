@@ -342,90 +342,138 @@ ORDER BY 1;
 
 ----------------------------------------------------------------------------------------------
 
+--TABLE "status"
 
 
-
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
-
-
-DROP TABLE IF EXISTS returned;
-CREATE TABLE returned
+DROP TABLE IF EXISTS u_dw.status;
+CREATE TABLE u_dw.status
 (
- return_id int NOT NULL,
- order_id  int NOT NULL,
- CONSTRAINT PK_returned PRIMARY KEY ( return_id ),
- CONSTRAINT FK_7 FOREIGN KEY ( order_id ) REFERENCES ordered ( order_id )
+status_id        int NOT NULL,
+status_name      varchar(20) NOT NULL,
+allowable_period int NOT NULL,
+CONSTRAINT PK_status PRIMARY KEY ( status_id )
 );
 
-CREATE INDEX FK_returned1 ON returned
+INSERT INTO u_dw.status(status_id,status_name,allowable_period) VALUES (1,'new',1);
+INSERT INTO u_dw.status(status_id,status_name,allowable_period) VALUES (2,'agreement',3);
+INSERT INTO u_dw.status(status_id,status_name,allowable_period) VALUES (3,'production',4);
+INSERT INTO u_dw.status(status_id,status_name,allowable_period) VALUES (4,'sending',2);
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ ОСТАЛОСЬ СДЕЛАТЬ ДЛЯ ЭТИХ ТАБЛИЦ
+
+
+
+
+
+
+
+DROP TABLE IF EXISTS u_dw.ordered;
+CREATE TABLE u_dw.ordered
 (
- order_id
+ order_id            int NOT NULL,
+ date_order          int NOT NULL,
+ date_ready          int NULL,
+ date_sent           int NULL,
+ date_delivered      int NULL,
+ product_id          int NOT NULL,
+ platform_id         int NOT NULL,
+ client_id           int NOT NULL,
+ status_id           int NOT NULL,
+ color_id            int NOT NULL,
+ discount            int NULL,
+ full_delivery_price int NOT NULL,
+ total_price         int NOT NULL,
+ CONSTRAINT PK_ordered PRIMARY KEY ( order_id ),
+ CONSTRAINT FK_1 FOREIGN KEY ( product_id ) REFERENCES u_dw.product ( product_id ),
+ CONSTRAINT FK_3 FOREIGN KEY ( color_id ) REFERENCES u_dw.color ( color_id ),
+ CONSTRAINT FK_4 FOREIGN KEY ( status_id ) REFERENCES u_dw.status ( status_id ),
+ CONSTRAINT FK_5 FOREIGN KEY ( client_id ) REFERENCES u_dw.client ( client_id ),
+ CONSTRAINT FK_6 FOREIGN KEY ( date_order ) REFERENCES u_dw.calendar ( date_id ),
+ CONSTRAINT FK_8 FOREIGN KEY ( platform_id ) REFERENCES u_dw.platform ( platform_id ),
+ CONSTRAINT FK_13 FOREIGN KEY ( date_ready ) REFERENCES u_dw.calendar ( date_id ),
+ CONSTRAINT FK_14 FOREIGN KEY ( date_sent ) REFERENCES u_dw.calendar ( date_id ),
+ CONSTRAINT FK_15 FOREIGN KEY ( date_delivered ) REFERENCES u_dw.calendar ( date_id )
 );
 
+CREATE INDEX FK_ordered1 ON u_dw.ordered
+(product_id);
+CREATE INDEX FK_ordered2 ON u_dw.ordered
+(color_id);
+CREATE INDEX FK_ordered3 ON u_dw.ordered
+(status_id);
+CREATE INDEX FK_ordered4 ON u_dw.ordered
+(client_id);
+CREATE INDEX FK_ordered5 ON u_dw.ordered
+(date_order);
+CREATE INDEX FK_ordered6 ON u_dw.ordered
+(platform_id);
+CREATE INDEX FK_ordered7 ON u_dw.ordered
+(date_ready);
+CREATE INDEX FK_ordered8 ON u_dw.ordered
+(date_sent);
+CREATE INDEX FK_ordered9 ON u_dw.ordered
+(date_delivered);
+
+
+INSERT INTO u_dw.ordered
+SELECT order_id,
+        date_id,
+        NULL,
+        NULL,
+        NULL,
+        model_id,
+        platform_id,
+        client_id,
+        4,
+        color_id,
+        discount,
+        extra_delivery_price + base_delivery_price,
+        price * (1 + discount) + extra_delivery_price + base_delivery_price
+FROM public.orders o
+INNER JOIN public.workshop USING(order_id)
+INNER JOIN u_dw.product ON product_id = model_id
+INNER JOIN u_dw.platform USING(platform_name)
+INNER JOIN u_dw.client c ON o.full_name = c.full_name AND o.phone_number = c.phone 
+INNER JOIN u_dw.color USING(color_name)
+INNER JOIN u_dw.city USING(city_id)
+INNER JOIN u_dw.calendar cal ON o.date_order = cal.full_date
+ORDER BY 1;
 
 
 
-DROP TABLE IF EXISTS status;
-CREATE TABLE status
-(
- status_id        int NOT NULL,
- status_name      varchar(20) NOT NULL,
- allowable_period int NOT NULL,
- CONSTRAINT PK_status PRIMARY KEY ( status_id )
-);
+ПОЯВЛЯЕТСЯ ОШИБКА ЯКОБЫ УЖЕ СУЩЕСТВУЕТ ТАКОЙ КЛЮЧ
+ИМЕННО order_id = 111
+Ещё 144 так же. Короче, чета надо разбираться, хз поч так
+ДРУГИЕ ВРОДЕ ПРОХОДЯТ
 
 
 
 
-DROP TABLE IF EXISTS workshop;
-CREATE TABLE workshop
-(
- produce_id  int NOT NULL,
- order_id    int NOT NULL,
- date_start  int NOT NULL,
- date_finish int NULL,
- master_id   int NOT NULL,
- CONSTRAINT PK_workshop PRIMARY KEY ( produce_id ),
- CONSTRAINT FK_9 FOREIGN KEY ( order_id ) REFERENCES ordered ( order_id ),
- CONSTRAINT FK_10 FOREIGN KEY ( master_id ) REFERENCES master ( master_id ),
- CONSTRAINT FK_11 FOREIGN KEY ( date_finish ) REFERENCES calendar ( date_id ),
- CONSTRAINT FK_12 FOREIGN KEY ( date_start ) REFERENCES calendar ( date_id )
-);
 
-CREATE INDEX FK_workshop1 ON workshop
-(
- order_id
-);
 
-CREATE INDEX FK_workshop2 ON workshop
-(
- master_id
-);
 
-CREATE INDEX FK_workshop3 ON workshop
-(
- date_finish
-);
 
-CREATE INDEX FK_workshop4 ON workshop
-(
- date_start
-);
 
 
 
@@ -478,3 +526,93 @@ CREATE INDEX FK_ordered9 ON ordered
 (date_delivered);
 
 
+
+------------------------------------------------------------------------------------------
+
+--Тут всё готово, только надо запустить после ordered
+
+
+
+DROP TABLE IF EXISTS u_dw.workshop;
+CREATE TABLE u_dw.workshop
+(
+ produce_id  int NOT NULL,
+ order_id    int NOT NULL,
+ date_start  int NOT NULL,
+ date_finish int NULL,
+ master_id   int NOT NULL,
+ CONSTRAINT PK_workshop PRIMARY KEY ( produce_id ),
+ CONSTRAINT FK_9 FOREIGN KEY ( order_id ) REFERENCES u_dw.ordered ( order_id ),
+ CONSTRAINT FK_10 FOREIGN KEY ( master_id ) REFERENCES u_dw.master ( master_id ),
+ CONSTRAINT FK_11 FOREIGN KEY ( date_finish ) REFERENCES u_dw.calendar ( date_id ),
+ CONSTRAINT FK_12 FOREIGN KEY ( date_start ) REFERENCES u_dw.calendar ( date_id )
+);
+
+CREATE INDEX FK_workshop1 ON u_dw.workshop
+(
+ order_id
+);
+
+CREATE INDEX FK_workshop2 ON u_dw.workshop
+(
+ master_id
+);
+
+CREATE INDEX FK_workshop3 ON u_dw.workshop
+(
+ date_finish
+);
+
+CREATE INDEX FK_workshop4 ON u_dw.workshop
+(
+ date_start
+);
+
+
+INSERT INTO u_dw.workshop
+SELECT ROW_NUMBER() OVER(), one, two, three, four
+FROM (SELECT order_id AS one,
+             date_order AS two,
+             date_produce AS three,
+             master_id AS four
+      FROM public.workshop w
+      INNER JOIN public.orders o USING(order_id)
+      INNER JOIN u_dw.master m USING(master_name)
+      ORDER BY 3) as in_q;
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+--TABLE "returned"
+
+ЗАВИСИТ ОТ ORDERED
+
+
+
+
+DROP TABLE IF EXISTS u_dw.returned;
+CREATE TABLE u_dw.returned
+(
+ return_id int NOT NULL,
+ order_id  int NOT NULL,
+ CONSTRAINT PK_returned PRIMARY KEY ( return_id ),
+ CONSTRAINT FK_7 FOREIGN KEY ( order_id ) REFERENCES ordered ( order_id )
+);
+
+CREATE INDEX FK_returned1 ON u_dw.returned
+(
+ order_id
+);
+
+INSERT INTO u_dw.returned
+SELECT ROW_NUMBER() OVER(), order_id 
+FROM (SELECT order_id
+      FROM public.returned r 
+      WHERE LOWER(returned) = 'yes'
+      ORDER BY 1) AS in_q;
